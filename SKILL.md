@@ -22,22 +22,6 @@ All data lives in `~/.local/share/life/` with one subdirectory per domain:
 
 Each entry is a single markdown file with YAML front matter and an optional body.
 
-## Identity and Secrets
-
-Read `~/.repos.json` for repository configuration. Use `pass` for secrets:
-
-```bash
-pass show gh/<org>          # GitHub token
-pass show email/<account>   # Email credentials
-```
-
-To get the current user's git identity:
-
-```bash
-git config --global user.name
-git config --global user.email
-```
-
 ## File Naming Conventions
 
 | Domain       | Pattern                            | Example                              |
