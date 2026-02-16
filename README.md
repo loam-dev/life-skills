@@ -58,7 +58,7 @@ Claude uses its built-in tools (Read, Write, Grep, Glob) to manage these files d
 The data directory is a git repo. Claude syncs with:
 
 ```bash
-cd ~/.local/share/life && git add -A && git commit -m "update" && git pull --rebase && git push
+cd ~/.local/share/life && git add -A && git commit -m "update: <brief description>" && git pull --rebase && git push
 ```
 
 YAML front matter files merge cleanly in git.

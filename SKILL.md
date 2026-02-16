@@ -263,7 +263,7 @@ Grep pattern="^mood: focused" path="~/.local/share/life/thoughts/"
 The data directory is a git repository. Sync with:
 
 ```bash
-cd ~/.local/share/life && git add -A && git commit -m "update" && git pull --rebase && git push
+cd ~/.local/share/life && git add -A && git commit -m "update: <brief description>" && git pull --rebase && git push
 ```
 
 Always sync after creating or modifying entries. See [reference/sync.md](reference/sync.md) for conflict resolution and detailed procedures.

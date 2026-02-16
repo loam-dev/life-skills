@@ -37,7 +37,7 @@ Omit null/empty fields from front matter.
 
 ```sql
 SELECT id, name, email, phone, company, role, relationship,
-       context, tags, last_contact, created_at
+       context, tags, last_contact, created_at, updated_at
 FROM people ORDER BY name;
 ```
 
@@ -54,6 +54,7 @@ relationship: <relationship>
 tags: <parse JSON array>
 last_contact: <last_contact>
 created_at: <created_at>
+updated_at: <updated_at>
 ---
 <context>
 ```
@@ -88,7 +89,8 @@ updated_at: <updated_at>
 
 ```sql
 SELECT id, project_id, type, title, description, status,
-       priority, due_date, tags, people, created_at, updated_at
+       priority, due_date, tags, people, created_at, updated_at,
+       completed_at
 FROM engagements ORDER BY created_at;
 ```
 
@@ -106,6 +108,7 @@ tags: <parse JSON array>
 people: <parse JSON array>
 created_at: <created_at>
 updated_at: <updated_at>
+completed_at: <completed_at>
 ---
 <description>
 ```
