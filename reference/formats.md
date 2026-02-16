@@ -15,7 +15,6 @@ tags: [string]          # list of tags for categorization
 project_id: string      # slug of a linked project (must match a filename in projects/)
 person_id: string       # slug of a linked person (must match a filename in people/)
 created_at: string      # ISO 8601 timestamp
-updated_at: string      # ISO 8601 timestamp, set on modification
 ---
 Body text with additional detail about the memory.
 ```
@@ -114,8 +113,8 @@ Extended description, goals, notes about the project.
 ---
 name: Life Skills
 description: Flat-file personal knowledge management
-repo_url: https://github.com/gh/<org>/life-skills
-local_path: ~/projects/life-skills
+repo_url: https://github.com/<org>/life-skills
+local_path: ~/repositories/life-skills
 status: active
 priority: 8
 tech_stack: [markdown, git]
@@ -160,7 +159,8 @@ Detailed description of the engagement, notes, action items.
 
 ```
 open -> in_progress -> done
-                   \-> cancelled
+  \                 \-> cancelled
+   \-> cancelled
 ```
 
 ### Example

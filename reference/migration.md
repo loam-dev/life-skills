@@ -1,17 +1,17 @@
 # Migration from life-os SQLite
 
-Guide for exporting data from the old life-os SQLite database (`~/.local/share/life/life.db`) to flat markdown files.
+Guide for exporting data from the old life-os SQLite database to flat markdown files.
 
 ## Prerequisites
 
-- Access to the SQLite database at `~/.local/share/life/life.db`
+- Access to the SQLite database (default: `~/life-os-data/life.db`, or `$LIFE_OS_DATA/life.db`)
 - Target directories already created under `~/.local/share/life/`
 
 ## Export Memories
 
 ```sql
 SELECT id, title, content, category, source, confidence,
-       project_id, person_id, tags, created_at, updated_at
+       project_id, person_id, tags, created_at
 FROM memories ORDER BY created_at;
 ```
 
@@ -27,7 +27,6 @@ tags: <parse JSON array>
 project_id: <project_id>
 person_id: <person_id>
 created_at: <created_at>
-updated_at: <updated_at>
 ---
 <content>
 ```
@@ -38,7 +37,7 @@ Omit null/empty fields from front matter.
 
 ```sql
 SELECT id, name, email, phone, company, role, relationship,
-       context, tags, created_at, updated_at
+       context, tags, last_contact, created_at
 FROM people ORDER BY name;
 ```
 
@@ -53,8 +52,8 @@ company: <company>
 role: <role>
 relationship: <relationship>
 tags: <parse JSON array>
+last_contact: <last_contact>
 created_at: <created_at>
-updated_at: <updated_at>
 ---
 <context>
 ```

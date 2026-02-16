@@ -151,8 +151,8 @@ Write a new file in `~/.local/share/life/projects/`:
 ---
 name: Life Skills
 description: Personal knowledge management skill
-repo_url: https://github.com/gh/<org>/life-skills
-local_path: ~/life-skills
+repo_url: https://github.com/<org>/life-skills
+local_path: ~/repositories/life-skills
 status: active
 priority: 8
 tech_stack: [typescript, markdown]
